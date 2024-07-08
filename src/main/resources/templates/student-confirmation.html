@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+</head>
+<body>
+    <p th:text = "'Student Name : ' + ${student.firstName} + ' ' + ${student.lastName}"></p>
+    <p th:text = "'From Country: ' + ${student.country}"></p>
+    <p th:text = "'Favorite Language : '+ ${student.favoriteLanguage}"></p>
+    Favorite Operating Systems:
+    <ul>
+        <li th:each="tempOS:${student.favoriteOS}" th:text="${tempOS}"></li>
+    </ul>
+</body>
+</html>

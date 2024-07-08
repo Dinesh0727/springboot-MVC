@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thyme Leaf Demo</title>
+    <link rel="stylesheet" th:href="@{/css/demo.css}"/>
+</head>
+<body>
+    Welcome to Spring and Thymeleaf for dynamic pages
+
+    <br></br>
+
+    <p th:text = "'My name is ' + ${param.studentName}" class="funny"></p>
+
+    <span th:text = "${result} "></span>
+</body>
+</html>
