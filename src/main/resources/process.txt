@@ -1,0 +1,7 @@
+When I want to add the feature to "Add Employee" the process was:
+1. Add the employee button which redirects to the employee-form page
+2. The form will have the input and the button to save the item 
+( Make sure you set the th:action, th:object )
+3. The th:action is the @{/employees/save}
+4. Add the controller for that url and there we save everything through
+employeeService and then we redirect them to the employees/list page 
