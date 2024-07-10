@@ -1,0 +1,31 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page of Locus</title>
+</head>
+<body>
+
+    <h3>Home</h3>
+    <hr>
+    <p>
+        User: <span sec:authentication="principal.username"></span>
+        <br><br>
+        Role: <span sec:authentication="principal.authorities"></span>
+    </p>
+    <br>
+    Locus is an all encompassing company.
+    <br><br>
+    <div sec:authorize="hasRole('MANAGER')">
+        <a href="#" th:href="@{/leaders}">Managers Only Meeting</a>
+    <br><br>
+    </div>
+    <div sec:authorize="hasRole('ADMIN')">
+        <a href="#" th:href="@{/systems}">System Engineers Only Meeting</a>
+    </div>
+    <hr>
+    <form action="#" th:action="@{/logout}" method="post">
+        <input type="submit" value="Logout" class="button button-info bt-sm">
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <h3>Custom Plain Login Form</h3>
+    <form action="#" th:action="@{/authenticateTheUser}" method="post">
+        <p th:if="${param.error}"> Invalid Username and Password</p>
+        <p>
+            Username:
+            <input type="text" name="username">
+        </p>
+        <p>
+            Password:
+            <input type="text" name="password">
+        </p>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
